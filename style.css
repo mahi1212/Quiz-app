@@ -18,6 +18,7 @@ body{
 body.correct{
     background-color: #0a5316;
 }
+
 body.wrong{
     background-color: #b92409;
 }
@@ -40,6 +41,7 @@ body.wrong{
     padding: 5px 15px;
     border: 1px solid #4e4d4d;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn-grid{
@@ -54,9 +56,26 @@ body.wrong{
 }
 
 .btn.correct{
+    color: black;
     background-color: #0a5316;
 }
 
 .btn.wrong{
     background-color: #b92409;
+}
+
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none; 
 }

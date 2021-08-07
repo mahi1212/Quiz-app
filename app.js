@@ -113,7 +113,7 @@ const questions = [
             { text : 'Wireless Fidelity', correct: true},
             { text : 'Wireless Fraction', correct: false},
             { text : 'Wireless Fast-Iteration', correct: false},
-            { text : 'Ami Jani Na Vai', correct: true}
+            { text : 'Network Invalid', correct: true}
         ]
     }
     

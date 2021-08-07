@@ -9,6 +9,10 @@ const answerButtonsElement = document.querySelector('#answer-buttons');
 let shuffleQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', () =>{
+    currentQuestionIndex++;
+    setNextQuestion();
+});
 
 function startGame(){
     startButton.classList.add('hide'); // hiding button at click
@@ -39,6 +43,7 @@ function showQuestion(question){
 }
 
 function resetState(){
+    clearStatusClass(document.body); //to remove bg color after appearing new que
     nextButton.classList.add('hide');
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -51,7 +56,13 @@ function selectAnswer(e){
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button =>{
         setStatusClass(button, button.dataset.correct);
-    })
+    });
+    if(shuffleQuestions.length > currentQuestionIndex + 1){
+        nextButton.classList.remove('hide');
+    }else{
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
+    }
 }
 
 function setStatusClass(element, correct){
@@ -70,10 +81,40 @@ function clearStatusClass(element){
 
 const questions = [
     {
-        question: "What is 2 + 2 ?",
+        question: "What is correct for 2! ?",
         answers : [
-            { text : '4', correct: true},
-            { text : '22', correct: false}
+            { text : '2', correct: true},
+            { text : '22', correct: false},
+            { text : '8', correct: false},
+            { text : '6', correct: false},
+        ]
+    },
+    {
+        question: "What is 5 * 6 ?",
+        answers : [
+            { text : '30', correct: true},
+            { text : '15', correct: false},
+            { text : '45', correct: false},
+            { text : '60', correct: false}
+        ]
+    },
+    {
+        question: "What is a scientist ?",
+        answers : [
+            { text : 'Newton', correct: true},
+            { text : 'Sakib', correct: false},
+            { text : 'Mark', correct: false},
+            { text : 'Elon', correct: false}
+        ]
+    },
+    {
+        question: "What does mean by WIFI ?",
+        answers : [
+            { text : 'Wireless Fidelity', correct: true},
+            { text : 'Wireless Fraction', correct: false},
+            { text : 'Wireless Fast-Iteration', correct: false},
+            { text : 'Ami bolmu na..Shorom korr', correct: true}
         ]
     }
+    
 ]

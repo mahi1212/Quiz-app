@@ -32,6 +32,9 @@ body.wrong{
     box-shadow: 0 0 10px 2px;
 }
 
+#question{
+    font-size: 30px;
+}
 
 .btn{
     color: #fff;

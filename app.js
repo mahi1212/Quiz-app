@@ -90,15 +90,6 @@ const questions = [
         ]
     },
     {
-        question: "What is 5 * 6 ?",
-        answers : [
-            { text : '30', correct: true},
-            { text : '15', correct: false},
-            { text : '45', correct: false},
-            { text : '60', correct: false}
-        ]
-    },
-    {
         question: "What is a scientist ?",
         answers : [
             { text : 'Newton', correct: true},
@@ -113,8 +104,16 @@ const questions = [
             { text : 'Wireless Fidelity', correct: true},
             { text : 'Wireless Fraction', correct: false},
             { text : 'Wireless Fast-Iteration', correct: false},
-            { text : 'Network Invalid', correct: true}
+            { text : 'Network Invalid', correct: false}
+        ]
+    },
+    {
+        question: "What is 5 * 6 ?",
+        answers : [
+            { text : '30', correct: true},
+            { text : '15', correct: false},
+            { text : '45', correct: false},
+            { text : '60', correct: false}
         ]
     }
-    
 ]
